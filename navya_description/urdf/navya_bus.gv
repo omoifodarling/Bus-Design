@@ -1,0 +1,200 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"base_link" [label="base_link"];
+"bus_engine" [label="bus_engine"];
+"accelerator_anchor" [label="accelerator_anchor"];
+"accelerator_pedal" [label="accelerator_pedal"];
+"break_anchor" [label="break_anchor"];
+"break_pedal" [label="break_pedal"];
+"clutch_anchor" [label="clutch_anchor"];
+"clutch_pedal" [label="clutch_pedal"];
+"steering_anchor" [label="steering_anchor"];
+"steering_wheel" [label="steering_wheel"];
+"steering_wheel_camera_link" [label="steering_wheel_camera_link"];
+"front_axle" [label="front_axle"];
+"front_left_wheel_rim" [label="front_left_wheel_rim"];
+"front_left_wheel" [label="front_left_wheel"];
+"front_right_wheel_rim" [label="front_right_wheel_rim"];
+"front_right_wheel" [label="front_right_wheel"];
+"front_guard" [label="front_guard"];
+"bonnet" [label="bonnet"];
+"front_guard_camera_link" [label="front_guard_camera_link"];
+"front_guard_laser_link" [label="front_guard_laser_link"];
+"front_left_fog_light" [label="front_left_fog_light"];
+"front_left_head_light" [label="front_left_head_light"];
+"front_left_trafficator_light" [label="front_left_trafficator_light"];
+"front_right_fog_light" [label="front_right_fog_light"];
+"front_right_head_light" [label="front_right_head_light"];
+"front_right_trafficator_light" [label="front_right_trafficator_light"];
+"left_door_anchor" [label="left_door_anchor"];
+"left_door_anchor_camera_link" [label="left_door_anchor_camera_link"];
+"left_door" [label="left_door"];
+"left_door_camera_link" [label="left_door_camera_link"];
+"left_door_handle" [label="left_door_handle"];
+"left_engine_cover_chassis" [label="left_engine_cover_chassis"];
+"left_front_chassis" [label="left_front_chassis"];
+"left_rear_chassis" [label="left_rear_chassis"];
+"rear_left_trafficator_light" [label="rear_left_trafficator_light"];
+"rear_axle" [label="rear_axle"];
+"rear_left_wheel_rim" [label="rear_left_wheel_rim"];
+"rear_left_wheel" [label="rear_left_wheel"];
+"rear_right_wheel_rim" [label="rear_right_wheel_rim"];
+"rear_right_wheel" [label="rear_right_wheel"];
+"right_door_anchor" [label="right_door_anchor"];
+"right_door_anchor_camera_link" [label="right_door_anchor_camera_link"];
+"right_door" [label="right_door"];
+"right_door_camera_link" [label="right_door_camera_link"];
+"right_door_handle" [label="right_door_handle"];
+"right_engine_cover_chassis" [label="right_engine_cover_chassis"];
+"right_front_chassis" [label="right_front_chassis"];
+"right_rear_chassis" [label="right_rear_chassis"];
+"rear_right_trafficator_light" [label="rear_right_trafficator_light"];
+"roof_chassis" [label="roof_chassis"];
+"front_windscreen" [label="front_windscreen"];
+"front_windscreen_camera_link" [label="front_windscreen_camera_link"];
+"rear_windscreen" [label="rear_windscreen"];
+"rear_guard" [label="rear_guard"];
+"boot_camera_link" [label="boot_camera_link"];
+"boot_laser_link" [label="boot_laser_link"];
+"rear_left_break_light" [label="rear_left_break_light"];
+"rear_left_fog_light" [label="rear_left_fog_light"];
+"rear_left_rear_light" [label="rear_left_rear_light"];
+"rear_left_reverse_light" [label="rear_left_reverse_light"];
+"rear_right_break_light" [label="rear_right_break_light"];
+"rear_right_fog_light" [label="rear_right_fog_light"];
+"rear_right_rear_light" [label="rear_right_rear_light"];
+"rear_right_reverse_light" [label="rear_right_reverse_light"];
+"rear_windscreen_camera_link" [label="rear_windscreen_camera_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "fixed" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"fixed" -> "base_link"
+"base_link" -> "bus_engine_joint" [label="xyz: 1.45 0 0.5101 \nrpy: 0 -0 0"]
+"bus_engine_joint" -> "bus_engine"
+"bus_engine" -> "accelerator_anchor_joint" [label="xyz: -0.2 0.234 -0.072 \nrpy: 0 -0.523599 0"]
+"accelerator_anchor_joint" -> "accelerator_anchor"
+"accelerator_anchor" -> "accelerator_pedal_joint" [label="xyz: -0.03 0 0.105 \nrpy: 0 -0.523599 0"]
+"accelerator_pedal_joint" -> "accelerator_pedal"
+"bus_engine" -> "break_anchor_joint" [label="xyz: -0.2 0.39 -0.072 \nrpy: 0 -0.523599 0"]
+"break_anchor_joint" -> "break_anchor"
+"break_anchor" -> "break_pedal_joint" [label="xyz: -0.03 0 0.105 \nrpy: 0 -0.523599 0"]
+"break_pedal_joint" -> "break_pedal"
+"bus_engine" -> "clutch_anchor_joint" [label="xyz: -0.2 0.312 -0.072 \nrpy: 0 -0.523599 0"]
+"clutch_anchor_joint" -> "clutch_anchor"
+"clutch_anchor" -> "clutch_pedal_joint" [label="xyz: -0.03 0 0.105 \nrpy: 0 -0.523599 0"]
+"clutch_pedal_joint" -> "clutch_pedal"
+"bus_engine" -> "steering_anchor_joint" [label="xyz: -0.2 0.4875 0.18 \nrpy: 0 -0.523599 0"]
+"steering_anchor_joint" -> "steering_anchor"
+"steering_anchor" -> "steering_wheel_joint" [label="xyz: -0.007 0 0.3925 \nrpy: 0 -0.523599 0"]
+"steering_wheel_joint" -> "steering_wheel"
+"steering_wheel" -> "steering_wheel_camera_joint" [label="xyz: 0 0 0.04 \nrpy: 0 -1.15611 0"]
+"steering_wheel_camera_joint" -> "steering_wheel_camera_link"
+"base_link" -> "front_axle_joint" [label="xyz: 1.36 0 0.25 \nrpy: 1.5708 -0 0"]
+"front_axle_joint" -> "front_axle"
+"front_axle" -> "front_left_wheel_rim_joint" [label="xyz: 0 0 -1.19891 \nrpy: 0 -0 0"]
+"front_left_wheel_rim_joint" -> "front_left_wheel_rim"
+"front_left_wheel_rim" -> "front_left_wheel_joint" [label="xyz: 0 0 -0.0864 \nrpy: 0 -0 0"]
+"front_left_wheel_joint" -> "front_left_wheel"
+"front_axle" -> "front_right_wheel_rim_joint" [label="xyz: 0 0 1.19891 \nrpy: 0 -0 0"]
+"front_right_wheel_rim_joint" -> "front_right_wheel_rim"
+"front_right_wheel_rim" -> "front_right_wheel_joint" [label="xyz: 0 0 0.0864 \nrpy: 0 -0 0"]
+"front_right_wheel_joint" -> "front_right_wheel"
+"base_link" -> "front_guard_joint" [label="xyz: 1.68 0 0.6451 \nrpy: 0 1.5708 -0"]
+"front_guard_joint" -> "front_guard"
+"front_guard" -> "bonnet_joint" [label="xyz: -0.315 0 -0.3 \nrpy: 0 -1.5708 0"]
+"bonnet_joint" -> "bonnet"
+"front_guard" -> "front_guard_camera_joint" [label="xyz: 0.08 0 0 \nrpy: 0 -1.5708 0"]
+"front_guard_camera_joint" -> "front_guard_camera_link"
+"front_guard" -> "front_guard_laser_joint" [label="xyz: 0 0 0.05 \nrpy: 0 -1.5708 0"]
+"front_guard_laser_joint" -> "front_guard_laser_link"
+"front_guard" -> "front_left_fog_light_joint" [label="xyz: -0.002 -0.9 0 \nrpy: 0 -0 0"]
+"front_left_fog_light_joint" -> "front_left_fog_light"
+"front_guard" -> "front_left_head_light_joint" [label="xyz: 0.01 0.7 0 \nrpy: 1.5708 -0 0"]
+"front_left_head_light_joint" -> "front_left_head_light"
+"front_guard" -> "front_left_trafficator_light_joint" [label="xyz: -0.122 -0.9 0 \nrpy: 0 -0 0"]
+"front_left_trafficator_light_joint" -> "front_left_trafficator_light"
+"front_guard" -> "front_right_fog_light_joint" [label="xyz: -0.002 0.9 0 \nrpy: 0 -0 0"]
+"front_right_fog_light_joint" -> "front_right_fog_light"
+"front_guard" -> "front_right_head_light_joint" [label="xyz: 0.01 -0.7 0 \nrpy: 1.5708 -0 0"]
+"front_right_head_light_joint" -> "front_right_head_light"
+"front_guard" -> "front_right_trafficator_light_joint" [label="xyz: -0.122 0.9 0 \nrpy: 0 -0 0"]
+"front_right_trafficator_light_joint" -> "front_right_trafficator_light"
+"base_link" -> "left_door_anchor_joint" [label="xyz: -0.01 1.025 0.3301 \nrpy: 0 -0 0"]
+"left_door_anchor_joint" -> "left_door_anchor"
+"left_door_anchor" -> "left_door_anchor_camera_joint" [label="xyz: 0 0 0.07 \nrpy: 0 -0 1.5708"]
+"left_door_anchor_camera_joint" -> "left_door_anchor_camera_link"
+"left_door_anchor" -> "left_door_joint" [label="xyz: 0 0 1.05 \nrpy: 1.5708 -0 0"]
+"left_door_joint" -> "left_door"
+"left_door" -> "left_door_camera_joint" [label="xyz: 0.03 0 0 \nrpy: 0 1.5708 1.5708"]
+"left_door_camera_joint" -> "left_door_camera_link"
+"left_door" -> "left_door_handle_joint" [label="xyz: 0.29 -0.5 0 \nrpy: 1.5708 -0 0"]
+"left_door_handle_joint" -> "left_door_handle"
+"base_link" -> "left_engine_cover_chassis_joint" [label="xyz: 1.55 1.025 0.6451 \nrpy: 1.5708 -0 0"]
+"left_engine_cover_chassis_joint" -> "left_engine_cover_chassis"
+"base_link" -> "left_front_chassis_joint" [label="xyz: 0.85 1.025 1.3801 \nrpy: 1.5708 -0 0"]
+"left_front_chassis_joint" -> "left_front_chassis"
+"base_link" -> "left_rear_chassis_joint" [label="xyz: -1.02 1.025 1.3801 \nrpy: 1.5708 -0 0"]
+"left_rear_chassis_joint" -> "left_rear_chassis"
+"left_rear_chassis" -> "rear_left_trafficator_light_joint" [label="xyz: -0.58 -0.8 0 \nrpy: 0 -0 0"]
+"rear_left_trafficator_light_joint" -> "rear_left_trafficator_light"
+"base_link" -> "rear_axle_joint" [label="xyz: -1.36 0 0.25 \nrpy: 1.5708 -0 0"]
+"rear_axle_joint" -> "rear_axle"
+"rear_axle" -> "rear_left_wheel_rim_joint" [label="xyz: 0 0 -1.19891 \nrpy: 0 -0 0"]
+"rear_left_wheel_rim_joint" -> "rear_left_wheel_rim"
+"rear_left_wheel_rim" -> "rear_left_wheel_joint" [label="xyz: 0 0 -0.0864 \nrpy: 0 -0 0"]
+"rear_left_wheel_joint" -> "rear_left_wheel"
+"rear_axle" -> "rear_right_wheel_rim_joint" [label="xyz: 0 0 1.19891 \nrpy: 0 -0 0"]
+"rear_right_wheel_rim_joint" -> "rear_right_wheel_rim"
+"rear_right_wheel_rim" -> "rear_right_wheel_joint" [label="xyz: 0 0 0.0864 \nrpy: 0 -0 0"]
+"rear_right_wheel_joint" -> "rear_right_wheel"
+"base_link" -> "right_door_anchor_joint" [label="xyz: -0.01 -1.025 0.3301 \nrpy: 0 -0 0"]
+"right_door_anchor_joint" -> "right_door_anchor"
+"right_door_anchor" -> "right_door_anchor_camera_joint" [label="xyz: 0 0 0.07 \nrpy: 0 0 -1.5708"]
+"right_door_anchor_camera_joint" -> "right_door_anchor_camera_link"
+"right_door_anchor" -> "right_door_joint" [label="xyz: 0 0 1.05 \nrpy: 1.5708 -0 0"]
+"right_door_joint" -> "right_door"
+"right_door" -> "right_door_camera_joint" [label="xyz: -0.03 0 0 \nrpy: 0 -1.5708 -1.5708"]
+"right_door_camera_joint" -> "right_door_camera_link"
+"right_door" -> "right_door_handle_joint" [label="xyz: 0.29 -0.5 0 \nrpy: 1.5708 -0 0"]
+"right_door_handle_joint" -> "right_door_handle"
+"base_link" -> "right_engine_cover_chassis_joint" [label="xyz: 1.55 -1.025 0.6451 \nrpy: 1.5708 -0 0"]
+"right_engine_cover_chassis_joint" -> "right_engine_cover_chassis"
+"base_link" -> "right_front_chassis_joint" [label="xyz: 0.85 -1.025 1.3801 \nrpy: 1.5708 -0 0"]
+"right_front_chassis_joint" -> "right_front_chassis"
+"base_link" -> "right_rear_chassis_joint" [label="xyz: -1.02 -1.025 1.3801 \nrpy: 1.5708 -0 0"]
+"right_rear_chassis_joint" -> "right_rear_chassis"
+"right_rear_chassis" -> "rear_right_trafficator_light_joint" [label="xyz: -0.58 -0.8 0 \nrpy: 0 -0 0"]
+"rear_right_trafficator_light_joint" -> "rear_right_trafficator_light"
+"base_link" -> "roof_chassis_joint" [label="xyz: 0 0 2.4551 \nrpy: 0 -0 0"]
+"roof_chassis_joint" -> "roof_chassis"
+"roof_chassis" -> "front_windscreen_joint" [label="xyz: 1.365 0 -0.75979 \nrpy: 0 1.55 0"]
+"front_windscreen_joint" -> "front_windscreen"
+"front_windscreen" -> "front_windscreen_camera_joint" [label="xyz: -0.05 0 0 \nrpy: 0 -1.25664 0"]
+"front_windscreen_camera_joint" -> "front_windscreen_camera_link"
+"roof_chassis" -> "rear_windscreen_joint" [label="xyz: -1.55 0 -0.51 \nrpy: 0 -1.2708 0"]
+"rear_windscreen_joint" -> "rear_windscreen"
+"rear_windscreen" -> "rear_guard_joint" [label="xyz: -0.55 0 0 \nrpy: -1.35645e-26 0.308362 -3.14159"]
+"rear_guard_joint" -> "rear_guard"
+"rear_guard" -> "boot_camera_joint" [label="xyz: 0.55 0 0.05 \nrpy: 0 -1.5708 0"]
+"boot_camera_joint" -> "boot_camera_link"
+"rear_guard" -> "boot_laser_joint" [label="xyz: 0.825 0 0.05 \nrpy: 0 -1.5708 0"]
+"boot_laser_joint" -> "boot_laser_link"
+"rear_guard" -> "rear_left_break_light_joint" [label="xyz: 0.7 0.7 0 \nrpy: 0 -0 0"]
+"rear_left_break_light_joint" -> "rear_left_break_light"
+"rear_guard" -> "rear_left_fog_light_joint" [label="xyz: 0.95 0.9 0 \nrpy: 0 -0 0"]
+"rear_left_fog_light_joint" -> "rear_left_fog_light"
+"rear_guard" -> "rear_left_rear_light_joint" [label="xyz: 0.75 0.9 0 \nrpy: 0 -0 0"]
+"rear_left_rear_light_joint" -> "rear_left_rear_light"
+"rear_guard" -> "rear_left_reverse_light_joint" [label="xyz: 0.9 0.7 0 \nrpy: 0 -0 0"]
+"rear_left_reverse_light_joint" -> "rear_left_reverse_light"
+"rear_guard" -> "rear_right_break_light_joint" [label="xyz: 0.7 -0.7 0 \nrpy: 0 -0 0"]
+"rear_right_break_light_joint" -> "rear_right_break_light"
+"rear_guard" -> "rear_right_fog_light_joint" [label="xyz: 0.95 -0.9 0 \nrpy: 0 -0 0"]
+"rear_right_fog_light_joint" -> "rear_right_fog_light"
+"rear_guard" -> "rear_right_rear_light_joint" [label="xyz: 0.75 -0.9 0 \nrpy: 0 -0 0"]
+"rear_right_rear_light_joint" -> "rear_right_rear_light"
+"rear_guard" -> "rear_right_reverse_light_joint" [label="xyz: 0.9 -0.7 0 \nrpy: 0 -0 0"]
+"rear_right_reverse_light_joint" -> "rear_right_reverse_light"
+"rear_windscreen" -> "rear_windscreen_camera_joint" [label="xyz: -0.05 0 0 \nrpy: 4.10207e-10 -1.09956 3.14159"]
+"rear_windscreen_camera_joint" -> "rear_windscreen_camera_link"
+}
